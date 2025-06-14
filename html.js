@@ -1,5 +1,5 @@
 ﻿var runonce = "false"; // changes to "true" once the exploit has been run
-var payloadFile = './payloads/goldhen.bin'; // default payload
+var payloadFile = './payloads/hen/goldhen.bin'; // default payload
 var payloadTitle = 'GoldHEN v2.4b18.3';
 var message = 'Lapse exploiting console and injecting ';
 
