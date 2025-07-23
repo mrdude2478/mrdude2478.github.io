@@ -1,0 +1,14 @@
+{
+  "name": "Lolin S3 Pro Firmware Only",
+  "version": "★ v1.0.0  ",
+  "builds": [
+    {
+      "chipFamily": "ESP32-S3",
+      "parts": [
+      	{ "path": "/esp32s3/lolinS3/bootloader.bin", "offset": 4096 },
+      	{ "path": "/esp32s3/lolinS3/partitions.bin", "offset": 32768 },
+      	{ "path": "/esp32s3/lolinS3/firmware.bin", "offset": 65536 }
+      ]
+    }
+  ]
+}
