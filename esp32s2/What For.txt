@@ -1,0 +1,1 @@
+Only for ESP32-S2 with 4MB flash and 2MB PSRAM
