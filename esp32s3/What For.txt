@@ -1,0 +1,2 @@
+For Lolin S3 Pro v1 or Any ESP32-S3 with 16MB Flash and QPI PSRAM
+https://www.wemos.cc/en/latest/s3/s3_pro.html
