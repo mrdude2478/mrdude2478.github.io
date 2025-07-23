@@ -1,0 +1,14 @@
+{
+  "name": "Lolin S2 Mini Firmware Only",
+  "version": "★ v1.0.0  ",
+  "builds": [
+    {
+      "chipFamily": "ESP32-S2",
+      "parts": [
+      	{ "path": "/esp32s2/lolinS2/bootloader.bin", "offset": 4096 },
+      	{ "path": "/esp32s2/lolinS2/partitions.bin", "offset": 32768 },
+      	{ "path": "/esp32s2/lolinS2/firmware.bin", "offset": 65536 }
+      ]
+    }
+  ]
+}
