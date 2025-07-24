@@ -1,6 +1,6 @@
 {
   "name": "Lolin S3 Pro Firmware Only",
-  "version": "★ v1.0.0  ",
+  "version": "★ v1.0.1  ",
   "builds": [
     {
       "chipFamily": "ESP32-S3",
