@@ -35,7 +35,7 @@ function checkCacheStatus() {
 
 async function forceGC() {
     try {
-        for (let i = 0; i < 10; i++) {
+        for (let i = 0; i < 50; i++) {
             let junk = new Array(10000).fill(0);
             junk = null;
             await new Promise(resolve => setTimeout(resolve, 10)); // Give browser time to GC
@@ -382,4 +382,5 @@ document.addEventListener('DOMContentLoaded', () => {
     function onCheckboxChange3(isChecked) { }
     //below is just to test boolean values when the page loads.
     //alert("Method 1 result: " + cb3 + " (type: " + typeof cb3 + ")");
+
 });
