@@ -1,0 +1,654 @@
+/* Base styling from edit.html/manager.html */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(0deg,rgb(4, 58, 92) 0%,rgb(38, 145, 212) 50%,rgb(38, 145, 212) 50%,rgb(4, 58, 92) 100%);
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    overflow-x: hidden;
+    z-index: -1;
+}
+/* Page card container with background image */
+.page-card {
+    background-image: url('../images/bg.jpg'); /* Your image path here */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: rgba(4, 99, 250, 0); /* Transparent to show image */
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    width: 98vw;
+    height: 96vh;
+    padding: 1vh;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    z-index: 3;
+    border: 1px solid rgba(255, 255, 255, 0.2);  /* Optional border */
+}
+
+.page-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(4, 99, 250, 0.5); /* Dark blue overlay */
+    border-radius: 12px;
+    z-index: -1;
+}
+
+/* Custom scrollbar - same as edit.html */
+::-webkit-scrollbar {
+	width: 10px;
+}
+
+::-webkit-scrollbar-track {
+	background: rgba(0, 0, 0, 0.1);
+	border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+	background: #007acc;
+	border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: #005f99;
+}
+/* Scrollable content area */
+.scrollable-content {
+	flex: 1;
+	overflow-y: auto;
+	width: 100%;
+	padding: 0 15px;
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center; /* Add this to center vertically */
+}
+
+/* Header/Navbar styling - all items same style */
+.navbar {
+	background-color: #007acc;
+	color: #fff;
+	padding: 10px 15px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 8px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	margin-bottom: 15px;
+	width: calc(100% - 30px);
+	flex-wrap: wrap;
+	position: relative;
+	z-index: 4;
+}
+
+/* All navbar items have same style - including dropdown triggers */
+.navbar a, .dropbtn {
+	color: #fff;
+	text-decoration: none;
+	padding: 10px 15px;
+	font-size: 16px;
+	transition: background-color 0.3s ease;
+	border-radius: 5px;
+	background: none;
+	border: none;
+	cursor: pointer;
+	font: inherit;
+}
+
+.navbar a:hover, .dropbtn:hover,
+.dropdown:hover .dropbtn {
+	background-color: #005f99;
+}
+
+/* Dropdown styles */
+.dropdown {
+	position: relative;
+	display: inline-block;
+}
+
+.dropdown-content {
+	display: none;
+	position: absolute;
+	background-color: #007acc;
+	min-width: 200px;
+	box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+	z-index: 110;
+	border-radius: 5px;
+	overflow: visible; /* Allow tooltips to overflow */
+}
+
+.dropdown-content a {
+	color: #fff;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+	transition: background-color 0.3s ease;
+	position: relative; /* For tooltip positioning */
+}
+
+.dropdown-content a:hover {
+	background-color: #005f99;
+}
+
+.dropdown:hover .dropdown-content {
+	display: block;
+}
+
+/* Main content area - with fixed height and rounded corners */
+.info {
+	width: 100%;
+	max-width: 49.5%; /* adjust this if you want to add more icons and make them fit in the screen */
+	text-align: center;
+	color: #b8b8b8;
+	padding: 20px;
+	background-color: rgba(3, 56, 105, 0.95);
+	border-radius: 10px;
+	margin: 0 auto; /* Center horizontally */
+	min-height: 300px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center; /* Center contents vertically */
+	overflow: hidden;
+	box-shadow: 0 0 15px 6px rgba(72, 171, 224, 0.2);
+}
+
+.wrapper {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh; /* Or a fixed height like 600px */
+}
+
+/* Fixed height for status text to prevent resizing */
+#statusText {
+	min-height: 80px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+h1 {
+	color: #fff;
+	font-size: 24px;
+	margin-bottom: 10px;
+	padding-bottom: 10px;
+	/* Add margin to prevent text from touching edges */
+	margin: 0 15px;
+}
+
+h2 {
+	color: #b8b8b8;
+	font-size: 18px;
+	margin-bottom: 20px;
+	/* Add margin to prevent text from touching edges */
+	margin: 0 15px 20px;
+}
+
+h3 {
+	color: #55bded;
+	font-size: 28px;
+	margin-bottom: 15px;
+	text-align: center;
+	text-shadow: 0 0 10px rgba(85, 189, 237, 0.5);
+}
+
+/* Payload buttons */
+.payload-row {
+	display: flex;
+	justify-content: center;
+	gap: 40px; /* Reduced gap for smaller screens */
+	margin-top: 20px;
+	flex-wrap: wrap;
+}
+
+.payload-group {
+	text-align: center;
+}
+
+.imgbutton {
+	background: none;
+	border: none;
+	padding: 0;
+	cursor: pointer;
+	transition: transform 0.3s ease;
+}
+
+.imgbutton:hover {
+	transform: translateY(-5px);
+}
+
+/* picture button icons */
+img {
+	border: 2px solid #007acc;
+	border-radius: 10px;
+	width: 256px;
+	height: 256px;
+	object-fit: cover;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+	transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add box-shadow to transition */
+}
+
+/* Add glow effect on hover */
+.imgbutton:hover img {
+	/*transform: translateY(-5px);*/
+	transform: translateY(-5px) scale(1.02); /* Slight zoom */
+	/*box-shadow: 0 0 15px 5px rgba(77, 166, 255, 0.7); /* Lighter blue glow */
+	box-shadow: 0 0 10px 3px rgba(77, 166, 255, 0.5);
+}
+
+/* Checkbox styling */
+.checkbox-label {
+	display: block;
+	margin-top: 15px;
+	font-size: 14px;
+	color: #b8b8b8;
+	cursor: pointer;
+}
+
+.checkbox-label2 {
+	display: block;
+	margin-top: 0px;
+	font-size: 14px;
+	color: #b8b8b8;
+	cursor: pointer;
+}
+
+/* New rule to move checkboxes down */
+.payload-group .tooltip:last-child {
+	margin-top: 8px; /* Adds 5px extra space above checkboxes */
+}
+
+input[type="checkbox"] {
+	margin-right: 8px;
+	cursor: pointer;
+}
+
+/* Tooltip styles - fixed positioning for dropdowns */
+.tooltip {
+	position: relative;
+	display: inline-block;
+}
+
+.tooltip .tooltiptext,
+.tooltip .tooltiptextx,
+.tooltip .tooltipcheckbox {
+	visibility: hidden;
+	width: max-content;
+	max-width: 250px;
+	background-color: #3e63ad;
+	color: #fff;
+	text-align: center;
+	border-radius: 4px;
+	padding: 6px 10px;
+	position: absolute;
+	z-index: 10000; /* High z-index to appear above dropdowns */
+	opacity: 0;
+	transition: opacity 0.3s ease;
+	pointer-events: none;
+}
+
+.tooltip .tooltipcheckboxLapse {
+	visibility: hidden;
+	width: max-content;
+	max-width: 500px;
+	background-color: rgba(3, 56, 105, 0.95);
+	color: #fff;
+	text-align: center;
+	border-radius: 4px;
+	padding: 6px 10px;
+	position: fixed;
+	z-index: 10000;
+	opacity: 0;
+	transition: opacity 0.3s ease;
+	pointer-events: none;
+	/* Center positioning */
+	left: calc(50% - 2px); /* Move 2px left from center */
+	transform: translate(-50%, -50%);
+	position: absolute; /* Changed from fixed to absolute to so we can set the height manually*/
+	top: -43px;
+}
+
+.tooltip .tooltiptextx2 {
+	visibility: hidden;
+	width: max-content;
+	max-width: 250px;
+	background-color: rgba(10, 83, 209,1.0); /*name of payload colour*/
+	color: #fff;
+	text-align: center;
+	border-radius: 4px;
+	padding: 6px 10px;
+	position: absolute;
+	z-index: 10000; /* High z-index to appear above dropdowns */
+	opacity: 0;
+	transition: opacity 0.3s ease;
+	pointer-events: none;
+}
+
+.tooltip .tooltiptext {
+	bottom: -58px;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.tooltip .tooltiptextx,
+.tooltip .tooltiptextx2 {
+	bottom: -34px;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.tooltip .tooltipcheckbox {
+	bottom: 22px;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+/* Special positioning for dropdown tooltips */
+.dropdown-content .tooltip .tooltiptext,
+.dropdown-content .tooltip .tooltiptextx,
+/*.dropdown-content .tooltip .tooltipcheckboxLapse,*/
+.dropdown-content .tooltip .tooltiptextx2 {
+	position: fixed; /* Fixed positioning for dropdown tooltips */
+	z-index: 10001; /* Higher than dropdowns */
+	top: auto;
+	bottom: auto;
+	left: auto;
+	transform: none;
+	margin-top: 30px;
+	margin-left: -20px;
+}
+
+.tooltip:hover .tooltiptext,
+.tooltip:hover .tooltiptextx,
+.tooltip:hover .tooltiptextx2,
+.tooltip:hover .tooltipcheckboxLapse,
+.tooltip:hover .tooltipcheckbox {
+	visibility: visible;
+	opacity: 1;
+}
+
+/* Popup styles */
+.popup {
+	display: none;
+	position: fixed;
+	inset: 0;
+	top: -9px;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	justify-content: center;
+	align-items: center;
+	z-index: 1000;
+	opacity: 0;
+	transition: opacity 0.3s ease;
+	pointer-events: none;
+	background-color: rgba(0,0,0,0.5);
+}
+
+.popup-content {
+	background-color: rgba(0, 0, 0, 0.95);
+	border: 2px solid #007acc;
+	border-radius: 10px;
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-bottom: 0px;
+	padding-top: 0px;
+	max-width: 560px;
+	max-height: 400px;
+	width: 80%;
+	height: 60%;
+	font-size: 18px;
+	color: #b8b8b8;
+	box-shadow: 0 0 0px 1px rgba(173, 198, 247, 0.9);
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	top: 24px;
+	overflow: hidden;
+}
+
+.popup.show {
+	display: flex;
+	opacity: 1;
+	pointer-events: auto;
+}
+
+/* Starfield canvas styling */
+#popup-starfield {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	border-radius: 10px;
+}
+
+.close {
+	position: absolute;
+	top: 10px;
+	right: 15px;
+	font-size: 24px;
+	color: white;
+	cursor: pointer;
+}
+
+.scroll-container {
+	height: 365px;
+	overflow: hidden;
+	padding-right: 10px;
+	position: relative;
+	z-index: 2;
+}
+
+.scroll-content {
+	position: absolute;
+	width: 100%;
+	will-change: transform;
+}
+
+.scroll-item {
+	margin-bottom: 20px;
+}
+
+/* Center all text in popup */
+.scroll-container p {
+	text-align: center;
+	margin: 10px 0;
+}
+
+/* Highlight pause elements for visual feedback */
+.pause-highlight {
+	animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+	0% { opacity: 1; }
+	50% { opacity: 0.7; }
+	100% { opacity: 1; }
+}
+
+/* Footer styling */
+.footer-card {
+	margin-top: auto;
+	background-color: #007acc;
+	color: #fff;
+	padding: 10px 15px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 8px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	width: calc(100% - 30px);
+	flex-wrap: wrap;
+	position: relative;
+	z-index: 2;
+}
+
+.footer-card a {
+	color: #fff;
+	text-decoration: none;
+	font-weight: bold;
+	transition: opacity 0.3s ease;
+}
+
+.footer-card a:hover {
+	opacity: 0.8;
+}
+
+.footer-line {
+	margin: 0; /* Remove default margins */
+	padding: 0; /* Remove default padding */
+}
+
+/* Add this to move text down */
+.footer-card > div {
+	position: relative;
+	top: 0px;
+}
+
+/* Lapse-dependent elements visibility */
+.lapse-dependent {
+	display: none;
+	opacity: 0;
+	transition: opacity 0.3s ease;
+}
+
+.lapse-visible .lapse-dependent {
+	display: inline-block; /* or 'block' depending on your layout needs */
+	opacity: 1;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+	.navbar {
+		flex-direction: column;
+		align-items: stretch;
+	}
+
+	.dropdown {
+		width: 100%;
+		text-align: center;
+	}
+
+	.dropdown-content {
+		position: static;
+		width: 100%;
+	}
+
+	.payload-row {
+		flex-direction: column;
+		gap: 20px;
+	}
+
+	img {
+		width: 220px;
+		height: 220px;
+	}
+
+	.info {
+		min-height: 500px;
+		padding: 15px;
+	}
+
+	h1 {
+		font-size: 22px;
+	}
+
+	h2 {
+		font-size: 16px;
+	}
+}
+
+@media (max-height: 700px) {
+	.info {
+		min-height: 400px;
+	}
+
+	img {
+		width: 220px;
+		height: 220px;
+	}
+
+	.payload-row {
+		gap: 20px;
+		margin-top: 15px;
+	}
+}
+/* Add to your index.css file */
+.ps4hen-group {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	justify-content: center;
+	transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.lapse-hidden .ps4hen-group {
+	display: none;
+}
+
+.ps4hen-group .tooltip:last-child {
+	margin-top: -10px; /* move checkbox */
+}
+
+/* Hide ESP32 message by default */
+.esp32-dependent {
+	display: none;
+	opacity: 0;
+	transition: opacity 0.3s ease;
+}
+
+.esp32-visible .esp32-dependent {
+	display: inline-block;
+	opacity: 1;
+}
+
+
+#esp32-message {
+	display: none; /* Default hidden */
+}
+
+body.esp32-hidden #esp32-message {
+	display: block;
+	color: #FFFFFF;
+	font-weight: bold;
+	font-size: 14px;
+	padding: 5px 10px;
+	text-align: center;
+}
+
+body.esp32-visible #esp32-message {
+	display: none; /* Ensure hidden when visible class is present */
+}
+
+/* Hide lapse toggle by default */
+#lapse-toggle {
+	display: none;
+}
+
+/* Show lapse toggle when on ESP32 */
+body.esp32-visible #lapse-toggle {
+	display: block;
+}
+
+
+.bullet-list {
+	text-align: left;
+	list-style-position: outside;
+	padding-left: 20px;
+	color: #03fc3d;
+}
