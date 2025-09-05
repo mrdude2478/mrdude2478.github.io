@@ -1,0 +1,19 @@
+{
+  "name": "Wemos S2 Mini Firmware",
+  "version": " ★ v1.0.3 ★ ",
+  "new_install_prompt_erase": true,
+  "home_assistant_domain": "ESP32",
+  "funding_url": "http://www.google.com",
+  "new_install_improv_wait_time": 3,
+  "builds": [
+    {
+      "chipFamily": "ESP32-S2",
+      "parts": [
+      	{ "path": "wemos/bootloader.bin", "offset": 4096 },
+      	{ "path": "wemos/partitions.bin", "offset": 32768 },
+      	{ "path": "wemos/firmware.bin", "offset": 65536 },
+      	{ "path": "wemos/ffat.bin", "offset": 2818048 }
+      ]
+    }
+  ]
+}

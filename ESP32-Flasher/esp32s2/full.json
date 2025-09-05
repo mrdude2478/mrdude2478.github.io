@@ -1,0 +1,16 @@
+{
+  "name": "Wemos S2 Mini Full Dump",
+  "version": " ★ v1.0.3 ★ ",
+  "new_install_prompt_erase": true,
+  "home_assistant_domain": "ESP32",
+  "funding_url": "http://www.google.com",
+  "new_install_improv_wait_time": 3,
+  "builds": [
+    {
+      "chipFamily": "ESP32-S2",
+      "parts": [
+      	{ "path": "wemos/fulldump.bin", "offset": 0 }
+      ]
+    }
+  ]
+}

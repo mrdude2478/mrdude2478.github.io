@@ -1,0 +1,19 @@
+{
+  "name": "Lolin S3 Pro Firmware",
+  "version": " ★ v1.0.3 ★ ",
+  "new_install_prompt_erase": true,
+  "home_assistant_domain": "ESP32",
+  "funding_url": "http://www.google.com",
+  "new_install_improv_wait_time": 3,
+  "builds": [
+    {
+      "chipFamily": "ESP32-S3",
+      "parts": [
+      	{ "path": "lolin/bootloader.bin", "offset": 0 },
+      	{ "path": "lolin/partitions.bin", "offset": 32768 },
+      	{ "path": "lolin/firmware.bin", "offset": 65536 },
+      	{ "path": "lolin/ffat.bin", "offset": 2949120 }
+      ]
+    }
+  ]
+}
