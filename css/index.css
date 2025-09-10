@@ -92,6 +92,11 @@ body {
 	z-index: 4;
 }
 
+.navbar .arrow {
+            font-size: 12px;
+            margin-left: 10px;
+        }
+
 /* All navbar items have same style - including dropdown triggers */
 .navbar a, .dropbtn {
 	color: #fff;
@@ -651,4 +656,5 @@ body.esp32-visible #lapse-toggle {
 	list-style-position: outside;
 	padding-left: 20px;
 	color: #03fc3d;
+
 }
