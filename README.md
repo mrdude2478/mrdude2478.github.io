@@ -2,4 +2,4 @@
 
 Website - https://mrdude2478.github.io/
 
-This page is for PS4 using firmware 9.0 only, for users other firmares you should check Kameleon's github repos - https://github.com/kmeps4?tab=repositories
+This page is for PS4 using firmware 9.0 only, for users other firmwares you should check Kameleon's github repos - https://github.com/kmeps4?tab=repositories
