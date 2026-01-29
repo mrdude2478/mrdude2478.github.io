@@ -1,0 +1,970 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wing IDE Keygen</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: #e6e6e6;
+            min-height: 100vh;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container {
+            background: rgba(30, 30, 46, 0.9);
+            border-radius: 15px;
+            padding: 30px;
+            width: 100%;
+            max-width: 600px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #3498db;
+        }
+
+            .header h1 {
+                color: #3498db;
+                font-size: 28px;
+                margin-bottom: 10px;
+                text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+            }
+
+            .header .subtitle {
+                color: #95a5a6;
+                font-size: 14px;
+                font-style: italic;
+            }
+
+        .card {
+            background: rgba(40, 40, 60, 0.7);
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-left: 4px solid #3498db;
+        }
+
+        .card-title {
+            color: #3498db;
+            margin-bottom: 15px;
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+            .card-title i {
+                font-size: 20px;
+            }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+            .form-group label {
+                display: block;
+                margin-bottom: 8px;
+                color: #bdc3c7;
+                font-weight: 500;
+            }
+
+        select, input {
+            width: 100%;
+            padding: 12px 15px;
+            background: rgba(50, 50, 70, 0.8);
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            color: #C5C7F0;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+
+            select:focus, input:focus {
+                outline: none;
+                border-color: #3498db;
+                box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+            }
+
+            input:read-only {
+                background: rgba(60, 60, 80, 0.9);
+                color: #C5C7F0;
+                cursor: not-allowed;
+            }
+
+        .hyphenated {
+            letter-spacing: 1px;
+            font-family: monospace;
+            font-size: 18px;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+            flex-wrap: wrap;
+        }
+
+        button {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            flex: 1;
+            min-width: 120px;
+        }
+
+        .btn-secondary {
+            background: rgba(100, 100, 120, 0.8);
+            color: white;
+        }
+
+            .btn-secondary:hover {
+                background: rgba(80, 80, 100, 0.9);
+                transform: translateY(-2px);
+            }
+
+        .btn-copy {
+            background: rgba(241, 196, 15, 0.9);
+            color: #2c3e50;
+            font-weight: bold;
+        }
+
+            .btn-copy:hover {
+                background: rgba(243, 156, 18, 0.9);
+            }
+
+        .message {
+            padding: 12px 15px;
+            border-radius: 8px;
+            margin-top: 15px;
+            display: none;
+            animation: slideIn 0.3s ease;
+        }
+
+            .message.success {
+                background: rgba(46, 204, 113, 0.2);
+                border: 1px solid #2ecc71;
+                color: #2ecc71;
+                display: block;
+            }
+
+            .message.error {
+                background: rgba(231, 76, 60, 0.2);
+                border: 1px solid #e74c3c;
+                color: #e74c3c;
+                display: block;
+            }
+
+            .message.info {
+                background: rgba(52, 152, 219, 0.2);
+                border: 1px solid #3498db;
+                color: #3498db;
+                display: block;
+            }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            color: #7f8c8d;
+            font-size: 14px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 20px;
+        }
+
+            .footer a {
+                color: #3498db;
+                text-decoration: none;
+                cursor: pointer;
+                transition: color 0.3s ease;
+            }
+
+                .footer a:hover {
+                    color: #2980b9;
+                    text-decoration: underline;
+                }
+
+        .info-text {
+            font-size: 12px;
+            color: #95a5a6;
+            margin-top: 5px;
+            font-style: italic;
+        }
+
+        .version-badge {
+            display: inline-block;
+            background: rgba(52, 152, 219, 0.2);
+            color: #3498db;
+            padding: 3px 8px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-left: 5px;
+        }
+
+        .auto-generate-note {
+            background: rgba(52, 152, 219, 0.1);
+            border: 1px solid rgba(52, 152, 219, 0.3);
+            border-radius: 6px;
+            padding: 10px;
+            margin-top: 10px;
+            font-size: 13px;
+            color: #3498db;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+
+            .buttons {
+                flex-direction: column;
+            }
+
+            button {
+                width: 100%;
+            }
+        }
+
+        .instructions-btn {
+            background: rgba(149, 165, 166, 0.2) !important;
+            color: white !important;
+            border: 1px solid rgba(112, 124, 125, 0.5) !important;
+            padding: 12px 24px !important;
+            border-radius: 8px !important;
+            font-size: 16px !important;
+            font-weight: 600 !important;
+            min-width: 120px !important;
+            width: 100% !important;
+        }
+
+            .instructions-btn:hover {
+                background: rgba(120, 140, 140, 0.3) !important;
+                transform: translateY(-2px) !important;
+            }
+
+        /* NEW: Modal Styles */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(5px);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .modal-content {
+            background: rgba(30, 30, 46, 0.95);
+            border-radius: 15px;
+            border: 1px solid rgba(52, 152, 219, 0.3);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+            max-width: 600px;
+            width: 100%;
+            max-height: 90vh;
+            overflow-y: auto;
+            animation: slideUp 0.3s ease;
+        }
+
+        .modal-header {
+            padding: 25px;
+            border-bottom: 2px solid rgba(52, 152, 219, 0.3);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(40, 40, 60, 0.8);
+        }
+
+            .modal-header h3 {
+                color: #3498db;
+                font-size: 20px;
+                margin: 0;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+            }
+
+        .close-btn {
+            background: rgba(60, 60, 80, 0.8);
+            border: none;
+            color: #95a5a6;
+            font-size: 24px;
+            cursor: pointer;
+            padding: 0;
+            width: 36px;
+            height: 36px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: all 0.3s ease;
+            flex: none;
+            min-width: auto;
+        }
+
+            .close-btn:hover {
+                background: rgba(52, 152, 219, 0.4);
+                color: #449FDB;
+                transform: rotate(90deg);
+            }
+
+        .modal-body {
+            padding: 25px;
+            background: rgba(40, 40, 60, 0.7);
+        }
+
+        .instruction-step {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+            align-items: flex-start;
+        }
+
+        .step-number {
+            background: linear-gradient(135deg, #3498db, #2980b9);
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            flex-shrink: 0;
+            box-shadow: 0 2px 10px rgba(52, 152, 219, 0.3);
+        }
+
+        .step-text {
+            color: #e6e6e6;
+            line-height: 1.6;
+            font-size: 15px;
+            padding-top: 5px;
+        }
+
+            .step-text strong {
+                color: #3498db;
+            }
+
+            .step-text code {
+                background: rgba(50, 50, 70, 0.9);
+                padding: 3px 8px;
+                border-radius: 4px;
+                color: #e74c3c;
+                font-family: 'Courier New', monospace;
+                font-size: 13px;
+                border: 1px solid rgba(231, 76, 60, 0.3);
+            }
+
+        .url-box {
+            background: rgba(50, 50, 70, 0.9);
+            border: 1px solid rgba(52, 152, 219, 0.3);
+            border-radius: 8px;
+            padding: 15px;
+            margin-top: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #95a5a6;
+            font-size: 13px;
+            word-break: break-all;
+            font-family: monospace;
+        }
+
+            .url-box i {
+                color: #3498db;
+                flex-shrink: 0;
+            }
+
+        .modal-footer {
+            padding: 20px 25px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            background: rgba(40, 40, 60, 0.8);
+        }
+
+        .modal-btn {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            flex: 0 0 auto;
+            min-width: 140px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .modal-btn-secondary {
+            background: rgba(100, 100, 120, 0.8);
+            color: white;
+        }
+
+            .modal-btn-secondary:hover {
+                background: rgba(80, 80, 100, 0.9);
+                transform: translateY(-2px);
+            }
+
+        .modal-btn-primary {
+            background: linear-gradient(135deg, #3498db, #2980b9);
+            color: white;
+        }
+
+            .modal-btn-primary:hover {
+                background: linear-gradient(135deg, #2980b9, #2573a7);
+                transform: translateY(-2px);
+                box-shadow: 0 5px 20px rgba(52, 152, 219, 0.3);
+            }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        body.modal-open {
+            overflow: hidden;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-key"></i> Wing IDE Keygen</h1>
+            <div class="subtitle">★ By MrDude ★</div>
+        </div>
+
+        <div class="card">
+            <div class="card-title">
+                <i class="fas fa-cog"></i> Configuration
+            </div>
+
+            <div class="form-group">
+                <label for="version">Wing IDE Version:</label>
+                <select id="version">
+                    <option value="5.X.X">5.X.X</option>
+                    <option value="6.X.X">6.X.X</option>
+                    <option value="7.X.X">7.X.X</option>
+                    <option value="8.X.X">8.X.X</option>
+                    <option value="9.X.X">9.X.X</option>
+                    <option value="10.X.X">10.X.X</option>
+                    <option value="11.X.X" selected>11.X.X</option>
+                    <option value="12.X.X">12.X.X</option>
+                    <option value="13.X.X">13.X.X</option>
+                </select>
+                <div class="info-text">Select your Wing IDE version</div>
+            </div>
+
+            <div class="form-group">
+                <label for="licenseId">License ID:</label>
+                <!--<input type="text" id="licenseId" class="hyphenated" readonly>-->
+                <input type="text" id="licenseId" class="hyphenated"
+                       placeholder="CNXXX-XXXXX-XXXXX-XXXXX" maxlength="23">
+                <div class="info-text">Automatically generated • Double-click to regenerate</div>
+            </div>
+
+            <div class="buttons">
+                <button class="btn-copy" onclick="copyToClipboard('licenseId')">
+                    <i class="fas fa-copy"></i> Copy License ID
+                </button>
+                <button class="btn-secondary" onclick="regenerateLicense()">
+                    <i class="fas fa-redo"></i> Regenerate
+                </button>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-title">
+                <i class="fas fa-code"></i> Request Code
+            </div>
+
+            <div class="form-group">
+                <label for="requestCode">Enter Request Code from Wing IDE:</label>
+                <input type="text" id="requestCode" class="hyphenated"
+                       placeholder="RWB2F-HW2G7-794W5-P3AB5" maxlength="23">
+                <div class="info-text">Paste the Request Code generated by Wing IDE</div>
+            </div>
+
+            <div class="auto-generate-note">
+                <i class="fas fa-bolt"></i> Activation code will be generated automatically
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-title">
+                <i class="fas fa-lock"></i> Activation Code
+            </div>
+
+            <div class="form-group">
+                <label for="activationCode">Generated Activation Code:</label>
+                <input type="text" id="activationCode" class="hyphenated" readonly>
+                <div class="info-text">Generated automatically when Request Code is entered</div>
+            </div>
+
+            <div class="buttons">
+                <button class="btn-copy" onclick="copyToClipboard('activationCode')">
+                    <i class="fas fa-copy"></i> Copy Activation Code
+                </button>
+            </div>
+        </div>
+
+        <div id="message" class="message"></div>
+
+        <div class="card" style="border-left-color: #3498db;">
+            <div class="card-title" style="color: #3498db;">
+                <i class="fas fa-shield-alt"></i> Magic Numbers Guide
+            </div>
+            <p style="color: #95a5a6; margin-top: -15px; margin-bottom: 15px; font-size: 12px; font-style: italic;">
+                Learn how to find the magic numbers for new versions
+            </p>
+            <button class="btn-secondary instructions-btn" onclick="openModal()">
+                <i class="fas fa-info-circle"></i> View Instructions
+            </button>
+        </div>
+
+        <div class="footer">
+            <p>For educational and research purposes only</p>
+            <p>Version 1.0 • Compatible with <a id="wingLink" title="Open Wing IDE website">Wing IDE</a> from version 5.X.X</p>
+        </div>
+    </div>
+    <div id="infoModal" class="modal-overlay" style="display: none;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3><i class="fas fa-shield-alt"></i> Magic Numbers Guide</h3>
+                <button class="close-btn" onclick="closeModal()">
+                    <i class="fas fa-times" style="font-size: 16px;"></i>
+                </button>
+            </div>
+
+            <div class="modal-body">
+                <div class="instruction-step">
+                    <div class="step-number">1</div>
+                    <div class="step-text">
+                        <strong>Download this file: </strong><code>ctlutil.cpython-312-x86_64-linux-gnu.so</code><br>
+                    </div>
+                </div>
+
+                <div class="instruction-step">
+                    <div class="step-number">2</div>
+                    <div class="step-text">
+                        <strong>Decompile</strong> the downloaded file with IDA Pro
+                    </div>
+                </div>
+
+                <div class="instruction-step">
+                    <div class="step-number">3</div>
+                    <div class="step-text">
+                        <strong>Search</strong> the decompiled code for the magic numbers
+                    </div>
+                </div>
+
+                <div class="url-box">
+                    <i class="fas fa-link"></i>
+                    <span>https://wingware.com/pub/wingpro/11.0.7.1/install-root/bin/ide/src/process/__os__/linux-x64/</span>
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <button class="modal-btn modal-btn-secondary" onclick="closeModal()">
+                    <i class="fas fa-times"></i> Close
+                </button>
+                <button class="modal-btn modal-btn-primary" onclick="visitUrl()">
+                    <i class="fas fa-external-link-alt"></i> Go to URL
+                </button>
+            </div>
+        </div>
+    </div>
+    <script>
+    // Magic numbers for different versions
+        const magics = {
+            "5.X.X": [7, 123, 23, 87],
+            "6.X.X": [23, 161, 47, 9],
+            "7.X.X": [221, 13, 93, 27],
+            "8.X.X": [179, 95, 45, 245],
+            "9.X.X": [123, 17, 42, 7],
+            "10.X.X": [102, 99, 107, 117],
+            "11.X.X": [6, 24, 15, 22],
+            "12.X.X": [70, 89, 79, 85],
+            "13.X.X": [198, 232, 214, 228]
+        };
+
+        // Character sets
+        const BASE16 = "0123456789ABCDEF";
+        const BASE30 = "123456789ABCDEFGHJKLMNPQRTVWXY";
+        const GOODCHARS = "123456789ABCDEFGHJKLMNPQRTVY";
+        const FIRSTCHARS = "123456789ABCDEF";
+
+        // Remove hyphens from code
+        function removeHyphens(code) {
+            return code.replace(/-/g, '').toUpperCase();
+        }
+
+        // Add hyphens to code (XXXXX-XXXXX-XXXXX-XXXXX)
+        function addHyphens(code) {
+            const clean = code.replace(/-/g, '');
+            if (clean.length !== 20) return code;
+            return `${clean.substring(0, 5)}-${clean.substring(5, 10)}-${clean.substring(10, 15)}-${clean.substring(15, 20)}`;
+        }
+
+        // Base conversion function matching C# implementation
+        function baseConvert(number, fromDigits, toDigits) {
+            if (!number || number === "") return "";
+
+            // Convert from source base to decimal using BigInteger-like approach
+            let x = 0n;
+            for (let i = 0; i < number.length; i++) {
+                const digit = number[i];
+                const idx = fromDigits.indexOf(digit);
+                if (idx === -1) {
+                    throw new Error(`Invalid character '${digit}' in input`);
+                }
+                x = x * BigInt(fromDigits.length) + BigInt(idx);
+            }
+
+            if (x === 0n) return "";  // Match C#: return empty for zero
+
+            let result = "";
+            const toBase = BigInt(toDigits.length);
+
+            while (x > 0n) {
+                const digitValue = Number(x % toBase);
+                result = toDigits[digitValue] + result;
+                x = x / toBase;
+            }
+
+            return result;
+        }
+
+        // Core loop function from C++/C#
+        function loop(ecx, lichash) {
+            let part = 0;
+            for (let i = 0; i < lichash.length; i++) {
+                part = (ecx * part + lichash.charCodeAt(i)) & 0xFFFFF;
+            }
+            return part;
+        }
+
+        // Generate activation code following C# logic exactly
+        async function generateActivation() {
+            // Get RAW values (with hyphens) for SHA1 calculation
+            const licenseIdRaw = document.getElementById('licenseId').value;
+            let requestCodeRaw = document.getElementById('requestCode').value;
+            const version = document.getElementById('version').value;
+
+            // Get CLEAN values (without hyphens) for validation
+            const licenseId = removeHyphens(licenseIdRaw);
+            const requestCode = removeHyphens(requestCodeRaw);
+
+            // Validate lengths (clean versions should be 20 chars)
+            if (licenseId.length !== 20) {
+                showMessage('License ID must be 20 characters', 'error');
+                return;
+            }
+
+            if (requestCode.length !== 20) {
+                showMessage('Request code must be 20 characters', 'error');
+                return;
+            }
+
+            if (!magics[version]) {
+                showMessage('Invalid version selected', 'error');
+                return;
+            }
+
+            try {
+                // Step 1: Use HYPHENATED strings for SHA1
+                const inputString = requestCodeRaw + licenseIdRaw;
+                const encoder = new TextEncoder();
+                const data = encoder.encode(inputString);
+
+                // Step 2: Compute SHA1 hash
+                const hashBuffer = await crypto.subtle.digest('SHA-1', data);
+                const hashArray = Array.from(new Uint8Array(hashBuffer));
+
+                // Step 3: Convert to hex string
+                let hashHex = "";
+                for (let i = 0; i < hashArray.length; i++) {
+                    hashHex += hashArray[i].toString(16).padStart(2, '0').toUpperCase();
+                }
+
+                // Step 4: Take every second character (even indices, 0-based)
+                let shaPart = "";
+                for (let i = 0; i < hashHex.length; i += 2) {
+                    shaPart += hashHex[i];
+                }
+
+                // Step 5: Convert from base16 to base30
+                let base30Part = baseConvert(shaPart, BASE16, BASE30);
+
+                // Step 6: Pad to 17 characters with '1' at the beginning
+                while (base30Part.length < 17) {
+                    base30Part = "1" + base30Part;
+                }
+
+                // Step 7: Create lichash using first 3 chars of RAW request code
+                const lichash = addHyphens(requestCodeRaw.substring(0, 3) + base30Part);
+
+                // Step 8: Get magic numbers for this version
+                const magic = magics[version];
+
+                // Step 9: Calculate the 4 parts
+                let actHex = "";
+                actHex += loop(magic[0], lichash).toString(16).padStart(5, '0');
+                actHex += loop(magic[1], lichash).toString(16).padStart(5, '0');
+                actHex += loop(magic[2], lichash).toString(16).padStart(5, '0');
+                actHex += loop(magic[3], lichash).toString(16).padStart(5, '0');
+                actHex = actHex.toUpperCase();
+
+                // Step 10: Convert hex to base30
+                let activationCode = baseConvert(actHex, BASE16, BASE30);
+
+                // Step 11: Pad to 17 characters with '1' at the beginning
+                while (activationCode.length < 17) {
+                    activationCode = "1" + activationCode;
+                }
+
+                // Step 12: Final activation code
+                activationCode = addHyphens("AXX" + activationCode);
+
+                // Update UI
+                document.getElementById('activationCode').value = activationCode;
+                showMessage('Activation code generated! Copied to clipboard.', 'success');
+
+                // Auto-copy to clipboard
+                copyToClipboard('activationCode');
+
+            } catch (error) {
+                console.error('Error:', error);
+                showMessage(`Error: ${error.message}`, 'error');
+            }
+        }
+
+        // Generate random license ID
+        function generateRandomLicense() {
+            const firstChar = FIRSTCHARS[Math.floor(Math.random() * FIRSTCHARS.length)];
+            const randomPart = Array.from({ length: 17 }, () =>
+                GOODCHARS[Math.floor(Math.random() * GOODCHARS.length)]
+            ).join('');
+
+            const license = `CN${firstChar}${randomPart}`;
+            document.getElementById('licenseId').value = addHyphens(license);
+        }
+
+        // Regenerate license ID
+        function regenerateLicense() {
+            generateRandomLicense();
+            showMessage('License ID regenerated!', 'success');
+        }
+
+        // Copy to clipboard
+        async function copyToClipboard(elementId) {
+            const element = document.getElementById(elementId);
+            const text = element.value;
+
+            if (!text) {
+                return; // Don't show error if empty
+            }
+
+            try {
+                await navigator.clipboard.writeText(text);
+                // Success message is shown elsewhere for activation code
+                if (elementId !== 'activationCode') {
+                    showMessage('Copied to clipboard!', 'success');
+                }
+            } catch (err) {
+                element.select();
+                document.execCommand('copy');
+                if (elementId !== 'activationCode') {
+                    showMessage('Copied to clipboard!', 'success');
+                }
+            }
+        }
+
+        // Show message
+        function showMessage(text, type = 'info') {
+            const messageDiv = document.getElementById('message');
+            messageDiv.textContent = text;
+            messageDiv.className = `message ${type}`;
+
+            setTimeout(() => {
+                messageDiv.style.display = 'none';
+            }, 5000);
+        }
+
+        // Open Wing IDE website
+        function openWingWebsite() {
+            window.open('https://wingware.com/pub/wingpro/', '_blank');
+        }
+
+        // Initialize on page load
+        document.addEventListener('DOMContentLoaded', function () {
+            generateRandomLicense();
+            setupEventListeners();
+
+            // Add click handler to Wing IDE link
+            document.getElementById('wingLink').addEventListener('click', openWingWebsite);
+        });
+
+        // Setup event listeners
+        function setupEventListeners() {
+            // Double-click on license ID to regenerate
+            document.getElementById('licenseId').addEventListener('dblclick', regenerateLicense);
+
+            // Auto-format and auto-generate for request code
+            document.getElementById('licenseId').addEventListener('input', function (e) {
+                let value = e.target.value
+                    .replace(/-/g, '')
+                    .toUpperCase()
+                    .replace(/[^0-9A-Z]/g, '');
+
+                // Always force prefix "CN"
+                if (!value.startsWith('CN')) {
+                    // If user tries to delete or change beginning → reset to CN + rest
+                    value = 'CN' + (value.length > 0 ? value.replace(/^C?N?/i, '') : '');
+                }
+
+                // Limit total length (including the CN)
+                if (value.length > 23) {
+                    value = value.substring(0, 23);
+                }
+
+                // Add dashes in the right places
+                let formatted = value;
+                if (value.length > 5) formatted = value.slice(0, 5) + '-' + value.slice(5);
+                if (value.length > 11) formatted = formatted.slice(0, 11) + '-' + formatted.slice(11);
+                if (value.length > 17) formatted = formatted.slice(0, 17) + '-' + formatted.slice(17);
+
+                e.target.value = formatted;
+
+                if (formatted.length === 23) {
+                    generateActivation();
+                }
+            });
+
+            // Auto-format and auto-generate for request code
+            document.getElementById('requestCode').addEventListener('input', function (e) {
+                let value = e.target.value.replace(/-/g, '').toUpperCase();
+                value = value.replace(/[^0-9A-Z]/g, '');
+
+                if (value.length > 5) value = value.substring(0, 5) + '-' + value.substring(5);
+                if (value.length > 11) value = value.substring(0, 11) + '-' + value.substring(11);
+                if (value.length > 17) value = value.substring(0, 17) + '-' + value.substring(17);
+
+                if (value.length > 23) value = value.substring(0, 23);
+
+                e.target.value = value;
+
+                // Auto-generate activation code when request code is complete
+                if (value.length === 23) {
+                    generateActivation();
+                }
+            });
+
+            // Change version regenerates license
+            document.getElementById('version').addEventListener('change', function () {
+                generateRandomLicense();
+                showMessage(`Version changed to ${this.value}`, 'info');
+            });
+        }
+
+        // NEW: Modal Functions
+        function openModal() {
+            document.getElementById('infoModal').style.display = 'flex';
+            document.body.classList.add('modal-open');
+        }
+
+        function closeModal() {
+            document.getElementById('infoModal').style.display = 'none';
+            document.body.classList.remove('modal-open');
+        }
+
+        function visitUrl() {
+            window.open('https://wingware.com/pub/wingpro/11.0.7.1/install-root/bin/ide/src/process/__os__/linux-x64/', '_blank');
+        }
+
+        // Close modal when clicking outside
+        document.addEventListener('DOMContentLoaded', function () {
+            const modal = document.getElementById('infoModal');
+            if (modal) {
+                modal.addEventListener('click', function (e) {
+                    if (e.target === this) {
+                        closeModal();
+                    }
+                });
+            }
+
+            // Close on Escape key
+            document.addEventListener('keydown', function (e) {
+                if (e.key === 'Escape') {
+                    const modal = document.getElementById('infoModal');
+                    if (modal && modal.style.display === 'flex') {
+                        closeModal();
+                    }
+                }
+            });
+        });
+        // END NEW
+    </script>
+</body>
+</html>
