@@ -1,0 +1,7 @@
+||playstation.net^
+||sonyentertainmentnetwork.com^
+||update.playstation.net^
+||://sonyentertainmentnetwork.com^
+||nams.dl.playstation.net^
+||pls.ndac.sony.net^
+||://sony.com^
