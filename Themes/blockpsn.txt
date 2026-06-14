@@ -1,4 +1,8 @@
 ||playstation.net^
+||playstation.com^
+||playstation.org^
+||scea.com^
+||sie-rd.com^
 ||sonyentertainmentnetwork.com^
 ||update.playstation.net^
 ||://sonyentertainmentnetwork.com^
